@@ -27,10 +27,10 @@ export const config = {
     textoLinks: 'Escolha uma opção abaixo para continuar.',
   },
   mainSite: {
-    name: 'Conteudos Privacy',
+    name: 'Conteudos Privados da Duda ❤️‍🔥',
     description: 'Aproveite seu benefício de 50% OFF.',
     logo: '/priv.webp',
-    url: 'https://example.com',
+    url: 'https://t.me/dudinhavipanabot',
     badge: 'RECOMENDADO',
   } satisfies Site,
   sites: [
@@ -45,6 +45,12 @@ export const config = {
       description: 'Tiktok',
       logo: '/image.webp',
       url: 'https://www.tiktok.com/@eududinhamariaa',
+    },
+    {
+      name: '@mariidudia',
+      description: 'Instagram',
+      logo: '/image.webp',
+      url: 'https://www.instagram.com/mariidudi/',
     },
   ] satisfies Site[],
 };
