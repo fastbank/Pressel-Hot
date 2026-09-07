@@ -38,7 +38,7 @@ export const config = {
       name: 'Previas da Duda ❤️‍🔥',
       description: 'Telegram',
       logo: '/telegram.webp',
-      url: 'https://t.me/previasdadudinhaspk',
+      url: 'https://t.me/previasdadudaofc',
     },
     {
       name: '@eududinhamariaa',
