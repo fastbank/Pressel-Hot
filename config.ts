@@ -13,12 +13,12 @@ export const config = {
   discount: 50 as const, // O benefício e o checkout devem permanecer em 50%.
   branding: { name: 'Seu benefício', logo: '' },
   texts: {
-    tituloMiniGame: '🎁 Escolha uma caixa e revele seu benefício',
+    tituloMiniGame: 'Escolha uma caixa e revele seu benefício',
     textoMiniGame: 'Você tem 1 benefício disponível.',
-    textoResultado: '🎉 Benefício desbloqueado!',
+    textoResultado: 'Benefício desbloqueado!',
     complementoResultado: 'Seu benefício foi liberado.',
     resgatar: 'RESGATAR 50% OFF',
-    tituloLinks: '🎉 Seu benefício foi desbloqueado',
+    tituloLinks: 'Seu benefício foi desbloqueado',
     textoLinks: 'Escolha uma opção abaixo para continuar.',
   },
   mainSite: {
@@ -26,7 +26,7 @@ export const config = {
     description: 'Aproveite seu benefício de 50% OFF.',
     logo: '',
     url: 'https://example.com',
-    badge: '🔥 RECOMENDADO',
+    badge: 'RECOMENDADO',
   } satisfies Site,
   sites: [
     {
