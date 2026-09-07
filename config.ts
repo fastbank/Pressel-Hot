@@ -12,6 +12,11 @@ export type Site = {
 export const config = {
   discount: 50 as const, // O benefício e o checkout devem permanecer em 50%.
   branding: { name: 'Seu benefício', logo: '' },
+  profile: {
+    image: '/image.webp',
+    name: '@mariadudasapeka',
+    description: 'Conteúdo exclusivo para você 💕',
+  },
   texts: {
     tituloMiniGame: 'Escolha uma caixa e revele seu benefício',
     textoMiniGame: 'Você tem 1 benefício disponível.',
@@ -22,24 +27,24 @@ export const config = {
     textoLinks: 'Escolha uma opção abaixo para continuar.',
   },
   mainSite: {
-    name: 'Site Principal',
+    name: 'Conteudos Privacy',
     description: 'Aproveite seu benefício de 50% OFF.',
-    logo: '',
+    logo: '/priv.webp',
     url: 'https://example.com',
     badge: 'RECOMENDADO',
   } satisfies Site,
   sites: [
     {
-      name: 'Site 2',
-      description: 'Conheça esta opção.',
-      logo: '',
-      url: 'https://example.org',
+      name: 'Previas da Duda ❤️‍🔥',
+      description: 'Telegram',
+      logo: '/telegram.webp',
+      url: 'https://t.me/previasdadudinhaspk',
     },
     {
-      name: 'Site 3',
-      description: 'Explore mais uma opção.',
-      logo: '',
-      url: 'https://example.net',
+      name: '@eududinhamariaa',
+      description: 'Tiktok',
+      logo: '/image.webp',
+      url: 'https://www.tiktok.com/@eududinhamariaa',
     },
   ] satisfies Site[],
 };

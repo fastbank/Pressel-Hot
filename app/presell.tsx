@@ -1,13 +1,6 @@
 'use client';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
-import {
-  ArrowRight,
-  Check,
-  CheckCircle2,
-  Gift,
-  Percent,
-  Tag,
-} from 'lucide-react';
+import { ArrowRight, CheckCircle2, Gift, Percent, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { config, type Site } from '../config';
 
@@ -35,6 +28,24 @@ function Logo({
         <Percent aria-hidden="true" />
       ) : (
         <span aria-hidden="true">{name.slice(0, 1)}</span>
+      )}
+    </span>
+  );
+}
+function ProfileImage({ name, src }: { name: string; src: string }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <span className="profile-image">
+      {src && !failed ? (
+        <img
+          src={src}
+          alt={name}
+          onError={() => setFailed(true)}
+          width={90}
+          height={90}
+        />
+      ) : (
+        <span aria-hidden="true">{name.replace('@', '').slice(0, 1)}</span>
       )}
     </span>
   );
@@ -124,35 +135,39 @@ export default function Presell({ links = false }: { links?: boolean }) {
   }, [unlocked, selected]);
   return (
     <div className="page-shell">
-      <header className="brand">
-        <Logo name={config.branding.name} src={config.branding.logo} brand />
-        <span>{config.branding.name}</span>
-      </header>
+      {!links && (
+        <header className="brand">
+          <Logo name={config.branding.name} src={config.branding.logo} brand />
+          <span>{config.branding.name}</span>
+        </header>
+      )}
       <main
         className={links ? 'content links-content' : 'content game-content'}
         aria-busy={!ready}
       >
-        <div className="steps" aria-label={`Etapa ${links ? 2 : 1} de 2`}>
-          <span className={!links ? 'current-step' : 'done-step'}>
-            <i>{links ? <Check size={13} /> : '1'}</i> Desbloqueie
-          </span>
-          <span className="step-line" />
-          <span className={links ? 'current-step' : ''}>
-            <i>2</i> Aproveite
-          </span>
-        </div>
+        {!links && (
+          <div className="steps" aria-label="Etapa 1 de 2">
+            <span className="current-step">
+              <i>1</i> Desbloqueie
+            </span>
+            <span className="step-line" />
+            <span>
+              <i>2</i> Aproveite
+            </span>
+          </div>
+        )}
         {links ? (
           <>
-            <section className="links-heading">
-              <span className="success-icon">
-                <CheckCircle2 aria-hidden="true" />
+            <section className="profile-header">
+              <ProfileImage
+                name={config.profile.name}
+                src={config.profile.image}
+              />
+              <h1>{config.profile.name}</h1>
+              <p>{config.profile.description}</p>
+              <span className="profile-benefit">
+                🔥 {config.discount}% OFF liberado
               </span>
-              <h1>{config.texts.tituloLinks}</h1>
-              <div className="discount-number">
-                {config.discount}
-                <span>% OFF</span>
-              </div>
-              <p>{config.texts.textoLinks}</p>
             </section>
             <SiteLink site={config.mainSite} main />
             {config.sites.length > 0 && (

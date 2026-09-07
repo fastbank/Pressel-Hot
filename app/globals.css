@@ -435,33 +435,65 @@ footer {
 .secondary-cta svg {
   flex-shrink: 0;
 }
-.links-content .steps {
-  margin-top: 0;
-  margin-bottom: 28px;
+.links-content {
+  padding-top: 36px;
 }
-.links-heading {
+.profile-header {
   text-align: center;
-  margin-bottom: 28px;
+  margin: 0 auto 24px;
+  padding: 4px 8px 2px;
 }
-.links-heading .success-icon {
-  width: 40px;
-  height: 40px;
+.profile-image {
+  width: 90px;
+  height: 90px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff, #fff0f5);
+  color: #b63d69;
+  font-size: 30px;
+  font-weight: 800;
+  overflow: hidden;
+  box-shadow:
+    0 10px 24px rgba(102, 52, 75, 0.12),
+    0 0 0 1px #f1d7e1;
 }
-.links-heading .success-icon svg {
-  width: 23px;
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.links-heading h1 {
-  font-size: 20px;
-  margin: 12px 0 2px;
+.profile-header h1 {
+  color: #2d2530;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  margin: 14px auto 6px;
+  overflow-wrap: anywhere;
 }
-.links-heading .discount-number {
-  font-size: 70px;
-  margin: 10px 0;
-}
-.links-heading p {
+.profile-header p {
   color: #756a73;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+  max-width: 290px;
   margin: 0;
+}
+.profile-benefit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  margin-top: 12px;
+  border: 1px solid #f1d7e1;
+  border-radius: 999px;
+  padding: 6px 13px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #bd3a6a;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(217, 70, 122, 0.08);
 }
 .main-site {
   background: linear-gradient(180deg, #fff, #fff8fb);
@@ -642,6 +674,16 @@ a[aria-disabled='true'] {
   }
   .eyebrow {
     letter-spacing: 0.5px;
+  }
+  .links-content {
+    padding-top: 28px;
+  }
+  .profile-image {
+    width: 82px;
+    height: 82px;
+  }
+  .profile-header h1 {
+    font-size: 21px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
