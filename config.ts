@@ -44,7 +44,7 @@ export const config = {
       name: '@eududinhamariaa',
       description: 'Tiktok',
       logo: '/image.webp',
-      url: 'https://www.tiktok.com/@eududinhamariaa',
+      url: 'https://www.tiktok.com/@marii_dudi',
     },
     {
       name: '@mariidudia',
